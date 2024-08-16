@@ -14,9 +14,9 @@ impl zed::Extension for NixExtension {
         worktree: &zed::Worktree,
     ) -> Result<zed::Command> {
         let path = worktree
-            .which("nixd")
-            .ok_or_else(|| "The Nix language server (nixd) is not available in your environment (PATH).
-                You can install it from https://github.com/nix-community/nixd.".to_string())?;
+            .which("nil")
+            .ok_or_else(|| "The Nix language server (nil) is not available in your environment (PATH).
+                You can install it from https://github.com/oxalica/nil.".to_string())?;
 
         Ok(zed::Command {
             command: path,
